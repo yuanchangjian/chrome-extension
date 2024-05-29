@@ -49,15 +49,9 @@ export class Connection extends YQObject {
 	private async reconnect() {
 		if (this._reconnecting) return;
 		this._reconnecting = true;
-		try {
-      this.close();
-      this.open();
-		} catch (error) {
-			logger.error('reconnect error');
-			logger.error(error);
-		} finally {
-			this._reconnecting = false;
-		}
+    await this.close();
+    await this.open();
+    this._reconnecting = false;
 	}
 
 	onClose(code: YQEndpointCloseCode) {
