@@ -1,3 +1,5 @@
+import { YQObject, register } from "../../base/common/object";
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export interface IYQRecycle {
 	add(id: number, object: any): void;
@@ -7,7 +9,8 @@ export interface IYQRecycle {
 	collect(): number[];
 }
 
-class YQRecycle implements IYQRecycle {
+@register("YQRecycle")
+class YQRecycle extends YQObject implements IYQRecycle {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 	// @ts-ignore
 	private _objects: { [id: number]: WeakRef<any> } = {};

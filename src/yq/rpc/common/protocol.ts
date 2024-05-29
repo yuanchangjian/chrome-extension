@@ -2,11 +2,11 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { EventEmitter } from 'events';
-import { IYQEvents, YQErrorEvents, YQEvents, YQObject, register } from '../../../base/common/object';
+import { IYQEvents, YQErrorEvents, YQEvents, YQObject, register } from '../../base/common/object';
 import { IYQRpcError, getErrorImpl } from './error';
 import { createRecycle } from './recycle';
 import type { IYQTransport } from './transport';
-import { toCamel } from '../../..//base/common/utils';
+import { toCamel } from '../../base/common/utils';
 
 const enum YQValueType {
 	error = -1,

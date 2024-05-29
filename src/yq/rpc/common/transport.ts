@@ -1,6 +1,6 @@
 
-import { YQErrorEvents, YQEvents, YQObject, register } from '../../../base/common/object';
-import { generateId, wait } from '../../../base/common/utils';
+import { YQErrorEvents, YQEvents, YQObject, register } from '../../base/common/object';
+import { generateId, wait } from '../../base/common/utils';
 import { AS_CLASS, YQProtocol } from './protocol';
 
 export const enum YQSessionAction {

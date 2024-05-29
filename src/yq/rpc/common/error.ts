@@ -53,7 +53,9 @@ class YQRpcErrorImpl extends Error {
 
 	rethrow(): void {
 		const stack = this.stack;
-		Error.captureStackTrace(this, this.rethrow);
+		if ((typeof Error.captureStackTrace === 'function')) {
+			Error.captureStackTrace(this, this.rethrow);
+		}
 		let index = this.stack.indexOf('\n') + 1;
 		if (index < 0) {
 			index = this.stack.indexOf('\r\n') + 2;

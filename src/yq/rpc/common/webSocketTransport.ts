@@ -1,9 +1,10 @@
 
 import { YQErrorEvents, YQEvents, register } from '../../base/common/object';
-import { YQTransportEvents, IYQTransport, YQClient, YQEndpointEvents } from './lib/transport';
+import { YQTransportEvents, IYQTransport, YQClient, YQEndpointEvents } from './transport';
 
 type YQWebSocketClientEvents = YQErrorEvents & YQTransportEvents & YQEndpointEvents<IYQTransport>;
 
+@register('YQWebSocketClient')
 export class YQWebSocketClient extends YQClient<IYQTransport> {
 	on: YQEvents<YQWebSocketClientEvents>['on'];
 	off: YQEvents<YQWebSocketClientEvents>['on'];
