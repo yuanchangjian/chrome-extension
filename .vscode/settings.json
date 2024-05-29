@@ -1,0 +1,29 @@
+{
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "files.eol": "\n",
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/manifest.json"
+            ],
+            "url": "http://json.schemastore.org/chrome-manifest"
+        }
+    ],
+    "editor.fontSize": 22,
+    "editor.codeLensFontSize": 22,
+    "editor.inlayHints.fontSize": 22,
+    "editor.minimap.sectionHeaderFontSize": 22,
+    "editor.suggestFontSize": 22,
+    "workbench.sash.size": 2,
+    "scm.inputFontSize": 22,
+    "terminal.integrated.fontSize": 22,
+    "debug.console.fontSize": 22,
+    "timeline.pageSize": 22,
+    "notebook.markup.fontSize": 22,
+    "notebook.output.fontSize": 22,
+    "html.format.wrapAttributesIndentSize": 22,
+    "chat.editor.fontSize": 22,
+    "markdown.preview.fontSize": 22,
+    "editor.accessibilityPageSize": 22,
+    "editor.scrollbar.horizontalScrollbarSize": 12
+}
